@@ -9,4 +9,7 @@ binary data gets corrupted when we read from `reg.getInputStream()`
 
 ## findings
 
-still _to be done_
+- gretty plugin has issues with tomcat
+- `IOUtils.copy()` works as expected here but not on main project
+
+still some work _to be done_
