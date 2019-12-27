@@ -28,7 +28,9 @@ public class UploadServlet extends HttpServlet {
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     String fileName = req.getHeader("x-file-name");
     try (InputStream in = req.getInputStream()) {
-      File f = new File("~/Imagens/" + fileName + ".jpg");
+      File f = new File("/tmp/" + fileName);
+      if(!f.exists()) f.createNewFile();
+      System.out.println(f);
       try (OutputStream out = new FileOutputStream(f)) {
         IOUtils.copy(in, out, 4096);
       }
