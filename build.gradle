@@ -21,4 +21,5 @@ gretty {
   contextPath = '/'
   // servletContainer = 'tomcat85'
   // managedClassReload = true
+  // tomcat is broken
 }
